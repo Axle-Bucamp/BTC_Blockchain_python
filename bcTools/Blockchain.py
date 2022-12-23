@@ -187,11 +187,9 @@ if __name__ == "__main__":
     second_block.proof_of_work(first_blockchain.blocks.hash, difficulty=1, start=0, end=1000, step=1)
     if second_block.nounce != 0:
         first_blockchain.add_new_block(second_block)
-
     print("actual nounce is", first_blockchain.blocks.nounce)
     print("actual hash is", first_blockchain.blocks.hash)
 
     print("decoding a transaction", deserialize(tx.encode().hex()))
-    # implementer les outils de la bibliothèque : https://github.com/primal100/pybitcointools
-    # de manière à le convertir dans notre format ou travailler sur pybitcointools directement
+
 
